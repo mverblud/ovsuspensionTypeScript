@@ -1,4 +1,5 @@
 import express, { Application } from 'express';
+import cors from 'cors';
 
 import usuarioRoutes from '../routes/usuarios';
 
@@ -34,14 +35,15 @@ class Server {
 
   middlewares() {
     // CORS
-    /*         this.app.use(cors());
+        this.app.use(cors());
         // Lectura y Parseo
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
         // Directorio publico
-        this.app.use(express.static("public"));
+        this.app.use(express.static('public'));
+
         // Fileupload - Carga de Archivos
-        this.app.use(fileUpload({
+/*         this.app.use(fileUpload({
             useTempFiles: true,
             tempFileDir: "/tmp/",
             createParentPath: true
