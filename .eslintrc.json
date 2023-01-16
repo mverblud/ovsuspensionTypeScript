@@ -1,0 +1,21 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {  
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }], // Comillas simples (dar advertencia cuando son dobles)
+        "semi": ["error", "always"],   // Semicolon, es decir, que las instrucciones terminen con “;”
+        "@typescript-eslint/no-explicit-any": ["error", {  "fixToUnknown": true}], // No estará permitido tipar con “any”
+        "no-var": "error",
+        "prefer-const": "error",
+        "eqeqeq": "error",
+        "no-trailing-spaces": "error"
+    }
+}
